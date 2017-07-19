@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SWIS" Class="SWISDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=SWIS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SWISConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SessionInfo" Member="SessionInfos">
+    <Type Name="SessionInfo">
+      <Column Name="VarSessionId" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarSessionName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShiftInfo" Member="ShiftInfos">
+    <Type Name="ShiftInfo">
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarShiftName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VarClassId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentAdmissionFee" Member="StudentAdmissionFees">
+    <Type Name="StudentAdmissionFee">
+      <Column Name="VarRegistrationID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudentID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarAdmittedClass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FltAdmissionfee" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TakaReceivedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReceivedEntrytime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VarReceivedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentDoc" Member="StudentDocs">
+    <Type Name="StudentDoc">
+      <Column Name="VarRegistrationID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VarStudentID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ImgBirthcertificate" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImgStudentPircture" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImgAdmissionForm" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_department" Member="tbl_departments">
+    <Type Name="tbl_department">
+      <Column Name="dep_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dep_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_EdxelSubject" Member="tbl_EdxelSubjects">
+    <Type Name="tbl_EdxelSubject">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSubjectName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpecificationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_feesCollection" Member="tbl_feesCollections">
+    <Type Name="tbl_feesCollection">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarInvoiceNo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FeesName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FeesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Session" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MonthFrom" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MonthTo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Vat" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="NetAmount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BranchId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ShiftId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_feesInfo" Member="tbl_feesInfos">
+    <Type Name="tbl_feesInfo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarClassId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FeesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarFeesName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fees" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FeesType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_feesType" Member="tbl_feesTypes">
+    <Type Name="tbl_feesType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FeesType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Month" Member="tbl_Months">
+    <Type Name="tbl_Month">
+      <Column Name="MonthId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MonthName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_role" Member="tbl_roles">
+    <Type Name="tbl_role">
+      <Column Name="role_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="role_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Student_attendance" Member="tbl_Student_attendances">
+    <Type Name="tbl_Student_attendance">
+      <Column Name="VarStudentID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarClassID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="sectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="outTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="present" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="late" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="absent" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="classDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_StudentPresentStatus" Member="tbl_StudentPresentStatus">
+    <Type Name="tbl_StudentPresentStatus">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PresentStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StatusInitial" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblhouse" Member="tblhouses">
+    <Type Name="tblhouse">
+      <Column Name="house_Code" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="house_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="remarks" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_user_info" Member="tbl_user_infos">
+    <Type Name="tbl_user_info">
+      <Column Name="uid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="upass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="urole" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="isactive" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="activationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="user_full_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_StudentSubjectAssign" Member="tbl_StudentSubjectAssigns">
+    <Type Name="tbl_StudentSubjectAssign">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSessionId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalaryScale" Member="SalaryScales">
+    <Type Name="SalaryScale">
+      <Column Name="VarScaleid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarScaleName" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="FltBasic" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FltHouseRent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FltMedical" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FltTransport" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FltIncrement" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FltPF" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="FltOther" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeEmploymentHistory" Member="EmployeeEmploymentHistories">
+    <Type Name="EmployeeEmploymentHistory">
+      <Column Name="NumEmployeeid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NumSlNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarOrganizationName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="VarOrganizationAdd" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarOrganizationContact" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="NumDesignationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarDutyResponsibility" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarJobDuration" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatJobStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatJobEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VarLeaveNote" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeTraining" Member="EmployeeTrainings">
+    <Type Name="EmployeeTraining">
+      <Column Name="NumEmployeeid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumSlNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarTrainingTitles" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="VarTrainingDuration" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatTrainingStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DatTrainingEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VarTrainingAchievement" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="emloyeenumid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_employee_attendence" Member="tbl_employee_attendences">
+    <Type Name="tbl_employee_attendence">
+      <Column Name="VarEmployeeid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarEmployeeName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NumDesignationid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AttendDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="In_Time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Out_Time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="present" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="absent" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="late" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_TransferHistory" Member="tbl_TransferHistories">
+    <Type Name="tbl_TransferHistory">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PreSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreCampus" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PreRoll" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreShift" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TraSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TraClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TraSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TraShift" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TraCampus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewRoll" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_EdexcelSubjectAssign" Member="tbl_EdexcelSubjectAssigns">
+    <Type Name="tbl_EdexcelSubjectAssign">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitCodeNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Students_Account" Member="tbl_Students_Accounts">
+    <Type Name="tbl_Students_Account">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvoNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="VarSessionId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PayableFeesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayableVat" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PayableAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NetPayable" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PaidFeesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaidAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PaidVat" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NetPaid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Dues" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="FeesAssignDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PayDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_feesCollectionSub" Member="tbl_feesCollectionSubs">
+    <Type Name="tbl_feesCollectionSub">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarFeesName" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarMonth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Vat" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NetAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ShiftId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarInvoiceNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_EdexelunitCode" Member="tbl_EdexelunitCodes">
+    <Type Name="tbl_EdexelunitCode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UnitCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitCodeSpeCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SpecificationCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_WaiverHistory" Member="tbl_WaiverHistories">
+    <Type Name="tbl_WaiverHistory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSessiuon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarClassId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FromMonthId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FromMonth" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ToMonthId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ToMonth" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarShiftId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Present_class" Member="tbl_Present_classes">
+    <Type Name="tbl_Present_class">
+      <Column Name="VarStudentID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarClassID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSessionId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StudentRoll" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CampusId" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ExamName" Member="tbl_ExamNames">
+    <Type Name="tbl_ExamName">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExamCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExamName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ExamType" Member="tbl_ExamTypes">
+    <Type Name="tbl_ExamType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExamTypeCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ExamTypeName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ExamNameId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Class" Member="Classes">
+    <Type Name="Class">
+      <Column Name="VarClassID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarClassName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Board" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClassType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="houseid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Branch" Member="Branches">
+    <Type Name="Branch">
+      <Column Name="VarBranchID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarBranchName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchInitial" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeDesignation" Member="EmployeeDesignations">
+    <Type Name="EmployeeDesignation">
+      <Column Name="NumDesignationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarDesignationName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeCategory" Member="EmployeeCategories">
+    <Type Name="EmployeeCategory">
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeDoc" Member="EmployeeDocs">
+    <Type Name="EmployeeDoc">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DegreeName1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="File1" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DegreeName2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="File2" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DegreeName3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="File3" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DegreeName4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="File4" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_EmployeeEmergencyContact" Member="tbl_EmployeeEmergencyContacts">
+    <Type Name="tbl_EmployeeEmergencyContact">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactPersonName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ContactPersonRelation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_PreviousSchool" Member="tbl_PreviousSchools">
+    <Type Name="tbl_PreviousSchool">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SchoolName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSection" Member="tblSections">
+    <Type Name="tblSection">
+      <Column Name="SectionId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NumSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="varSectionName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ExamMarks" Member="tbl_ExamMarks">
+    <Type Name="tbl_ExamMark">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarClassId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarShift" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSubName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarSubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitCodeNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="First_ST_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Second_ST_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Third_ST_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Final_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Avg_ST_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Highest_ST_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total_Marks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VarShiftId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniqueSubId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniqueSubName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_InterviewSlot" Member="tbl_InterviewSlots">
+    <Type Name="tbl_InterviewSlot">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InterviewSlot" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InterviewTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_InterViewTime" Member="tbl_InterViewTimes">
+    <Type Name="tbl_InterViewTime">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InterViewTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ExamSession" Member="tbl_ExamSessions">
+    <Type Name="tbl_ExamSession">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SessionId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamSessionId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamSessionName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_BoardExamResult" Member="tbl_BoardExamResults">
+    <Type Name="tbl_BoardExamResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Board" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_OffDayStatus" Member="tbl_OffDayStatus">
+    <Type Name="tbl_OffDayStatus">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VarStatus" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ReAdmissionHistory" Member="tbl_ReAdmissionHistories">
+    <Type Name="tbl_ReAdmissionHistory">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PreSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreCampus" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PreRoll" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PreShift" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ReSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ReSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReShift" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ReCampus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NewRoll" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_StudentAttendance" Member="tbl_StudentAttendances">
+    <Type Name="tbl_StudentAttendance">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarStudentId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AttendanceStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="VarBranch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_StudentArea" Member="tbl_StudentAreas">
+    <Type Name="tbl_StudentArea">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AreaName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeEducation" Member="EmployeeEducations">
+    <Type Name="EmployeeEducation">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarEmployeeid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VarInstituteName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarExamName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarExamPass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarExamResult" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_EmployeeDegreeName" Member="tbl_EmployeeDegreeNames">
+    <Type Name="tbl_EmployeeDegreeName">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarExamName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_BoardSubject" Member="tbl_BoardSubjects">
+    <Type Name="tbl_BoardSubject">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Board" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClassLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QualificationLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UniqueId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="VarEmployeeid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmployeeCategory" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EmployeeDesignation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarEmployeeName" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="VarCurrentStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VarBlood" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarReligion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarEmployeeSex" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarNationality" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarEmployeePhoneNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarEmployeeEmail" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="VarNID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarDrivLicPassport" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarCampusId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarPresentAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarPermanentAddress" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="ExtraRemarks" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="VarPicture" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JoinSubject" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JoinDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JoinSalary" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CurrentSalary" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AdditionalNote" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Experience" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarQualification" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatLeavedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VarLeavedFor" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="VarFatherName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="VarFContactNo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarMotherName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="VarMContactNo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarMaritalstatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSpouseName" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="VarSpouseOccupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarSpouseContact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBankName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="VarBankAcc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InsertDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InsertUid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdateUid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParticipantStudent" Member="ParticipantStudents">
+    <Type Name="ParticipantStudent">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="varRegistrationId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="varStudentFirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="varStudentMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="varStudentLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="varFatherName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudentGender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="fatherPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="varMotherName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="motherOccupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="motherPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PresentAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="EmergencyPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="admissionForClass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReferredBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StudentPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="VarSiblingName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSiblingClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSiblingSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSiblingRoll" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="priviousSchoolName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="priviousSClass" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PriviousSyear" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdmissionDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InterviewDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InterviewSlot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IntrviewTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InputDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_BoardExamSubAssign" Member="tbl_BoardExamSubAssigns">
+    <Type Name="tbl_BoardExamSubAssign">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Session" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Board" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamSession" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="QualificationLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitCodeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UniqueId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_EmployeeSubjectAssign" Member="tbl_EmployeeSubjectAssigns">
+    <Type Name="tbl_EmployeeSubjectAssign">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarEmpId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EntryBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tempAttendence" Member="tempAttendences">
+    <Type Name="tempAttendence">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Attendence" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tempTabulationSheet" Member="tempTabulationSheets">
+    <Type Name="tempTabulationSheet">
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Percentage" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Attendence" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Project" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Position" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectGrade" Member="ProjectGrades">
+    <Type Name="ProjectGrade">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ProjectId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProjectGrade" Member="ProjectGrade1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarBranchID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temp_AllBoardExamSubjectWithUnitCode" Member="temp_AllBoardExamSubjectWithUnitCodes">
+    <Type Name="temp_AllBoardExamSubjectWithUnitCode">
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TotalSub" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExamSession" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarUser" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarBranch" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temp_AllSubjectWithUnitCode" Member="temp_AllSubjectWithUnitCodes">
+    <Type Name="temp_AllSubjectWithUnitCode">
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TotalSub" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarBranch" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarUser" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temp_IDCard" Member="temp_IDCards">
+    <Type Name="temp_IDCard">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TotalUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarBranch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temp_FileTag" Member="temp_FileTags">
+    <Type Name="temp_FileTag">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TotalUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarBranch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_ReportTextObject" Member="Temp_ReportTextObjects">
+    <Type Name="Temp_ReportTextObject">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarTextObject" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="VarReport" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="VarBranch" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VarUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="VarBranchID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VarRegistrationID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VarSessionName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarAdmissionSession" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="VarStudentID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VarStudentFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudentMeddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudentLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudentGender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarStudentBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VarStudentNationality" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarStudenAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarStudentArea" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="VarStudenHomePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarStudenHomeCell" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarReligion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarFatherName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarFatherOccupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarFatherOfficeAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarFatherMobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarFatherEmail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="VarMotherName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="VarMotherOccupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarMotherOfficeAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarMotherMobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarMotherEmail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="VarSiblingYesNo" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="VarSiblingName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSiblingShift" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSiblingClass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSiblingSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarSiblingRoll" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarPreviousSchoolAttended" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarPrivateYes" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="VarPrincipalRemarks" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="RecommendAddmissionClassName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RecommendAdmissionClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RecommendAdmissionSection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RecommendDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BloodGroup" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LeftSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TCComments" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StudentRoll" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CampusId" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PClassID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="InputTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExamineeSMSNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TempDynamicReport" Member="TempDynamicReports">
+    <Type Name="TempDynamicReport">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarStudentID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="StudentName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="VarSession" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Roll" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarClass" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DatDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarBranch" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Subject" Member="tbl_Subjects">
+    <Type Name="tbl_Subject">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VarSubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarASCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarSubjectName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SubSerial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarClassName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsLab" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExamType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VarBranchId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VarShiftCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TempCurrentStudent" Member="TempCurrentStudents">
+    <Type Name="TempCurrentStudent">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OldStudent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NewStudent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalStudent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClassName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

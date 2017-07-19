@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 32.375, 34.5" name="SWIS">
+  <DataContextMoniker Name="/SWISDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c573c061-08aa-4e1a-a996-d933dfcdebf5" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SWISDataContext/SessionInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cc2d5da-c624-4618-986d-4bdd3fd10400" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66564fd4-225c-4323-81d6-d2ed238306f5" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SWISDataContext/ShiftInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="668d8a7d-c986-4358-83f1-b8b5a13269c9" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9155fe8-8b92-47c7-b1cd-cd9b364528a7" absoluteBounds="0.75, 3.75, 2, 2.347801106770834">
+      <DataClassMoniker Name="/SWISDataContext/StudentAdmissionFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26ccba77-efee-4207-94f5-175147702277" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2650efc-fe2d-4c56-861d-8fa05a1a6802" absoluteBounds="3.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SWISDataContext/StudentDoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e8ade81-e8e4-4bb4-bb60-c2d50178776b" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0389997-4c82-4935-a54e-b7767f295b95" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/SWISDataContext/tbl_department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1700e2a0-3dbe-4a24-9f0c-99227a6ce640" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7096312a-c25b-4aa1-8e29-a97e4b9a1618" absoluteBounds="6.75, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_EdxelSubject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23ad1eb4-71cc-4608-b9d4-660ceb0f2f6a" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="789df0e9-b607-4e74-8342-f64e70991734" absoluteBounds="3.75, 6.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_feesCollection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1861b1a-5cb5-44f3-85c3-67100a854ab1" absoluteBounds="3.765, 7.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c81ea031-8ebd-4cc1-b6bd-5d4b4a2f1f71" absoluteBounds="6.75, 6.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SWISDataContext/tbl_feesInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06a7a939-54a3-4333-a620-1b496d58ce87" absoluteBounds="6.765, 7.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af553333-3677-46d7-8dfa-7283ab839841" absoluteBounds="9.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SWISDataContext/tbl_feesType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5d56a59-55c3-4275-b437-97248d6fd35c" absoluteBounds="9.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7222b44-556a-48e3-9c74-872e8a5b2521" absoluteBounds="9.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SWISDataContext/tbl_Month" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ff148f9-127a-48e5-93d4-0482e48be6e7" absoluteBounds="9.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="357c1bbb-3e0d-40d5-904e-f1f855a80f8f" absoluteBounds="9.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SWISDataContext/tbl_role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b167744-97d9-42c9-b1e7-19dba9bb644f" absoluteBounds="9.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="929a98bb-2471-4d74-8d23-ee0946192999" absoluteBounds="9.75, 7.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_Student_attendance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10122c8e-7b08-4d38-834b-5ca3de7d37ec" absoluteBounds="9.765, 8.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3fb0226f-6e54-4d7b-8e3b-754efd7b13b3" absoluteBounds="0.75, 11.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/SWISDataContext/tbl_StudentPresentStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6c1cba9-8e1c-4947-ba0e-d34d5ecd8aa8" absoluteBounds="0.765, 12.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8988b4df-37f8-48ae-bf3f-75857e6f57a0" absoluteBounds="3.75, 11.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SWISDataContext/tblhouse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23e5e879-d357-45e0-856a-7c27d8d48964" absoluteBounds="3.765, 12.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="996e127e-b7e5-48f0-9423-a78bcad0230b" absoluteBounds="12.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SWISDataContext/tbl_user_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b08b11a-31ca-41ed-aff2-a43a1a5890ea" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5f1a82c-6b35-4241-b083-7f78e92a5c7c" absoluteBounds="12.75, 4.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_StudentSubjectAssign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21994611-d219-491a-98e2-22fff6710ce8" absoluteBounds="12.765, 5.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9fc0e28f-f79f-48e3-8bad-b06b85ba2f4a" absoluteBounds="6.75, 12.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/SWISDataContext/SalaryScale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ccb41fa-180b-4284-8e4e-720b2830b930" absoluteBounds="6.765, 13.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="985d471e-940e-4616-ac9c-d5d8e7c3cc36" absoluteBounds="12.75, 8.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/SWISDataContext/EmployeeEmploymentHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b18b576-f2c7-4397-8fad-49d87d24d0ae" absoluteBounds="12.765, 9.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e94c9208-a8af-469e-8af9-5110d8ce0c5d" absoluteBounds="9.75, 12.75, 2, 2.9247054036458344">
+      <DataClassMoniker Name="/SWISDataContext/EmployeeTraining" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9a7d646-d2f4-4b44-bc08-a635b26656e5" absoluteBounds="9.765, 13.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3a5546af-265e-4e11-b794-5d1cd7763980" absoluteBounds="12.75, 12.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_employee_attendence" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ff84e68-a492-42a2-9461-3e8e351f8aa3" absoluteBounds="12.765, 13.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5bdf468-b0ef-4ee4-80f2-29aa04130585" absoluteBounds="0.75, 14.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_TransferHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2309c35f-d832-4432-a5a6-239ad8fc0374" absoluteBounds="0.765, 15.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="594bf17e-730e-4472-9c08-599a00c77396" absoluteBounds="15.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/SWISDataContext/tbl_EdexcelSubjectAssign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e88a3b0-594b-4994-b905-56d15a9f6d65" absoluteBounds="15.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb19ce92-a782-4b4a-8bff-298ab9319db1" absoluteBounds="15.75, 4.75, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/SWISDataContext/tbl_Students_Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6ed474b-dc3d-4f4a-846d-7ba8334dbe1c" absoluteBounds="15.765, 5.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9893e9a-eff0-4c81-9fe1-e6ceac3f4092" absoluteBounds="15.75, 10.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_feesCollectionSub" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a638dde-9559-4339-97b2-7afd223b2bdf" absoluteBounds="15.765, 11.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5bc2231a-7342-4a92-8119-011913011cea" absoluteBounds="15.75, 15.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SWISDataContext/tbl_EdexelunitCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffa51969-e180-494a-9a0e-83470f02db05" absoluteBounds="15.765, 16.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbd66cd2-1a11-482b-8758-4054eb5ff7ef" absoluteBounds="3.75, 16.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_WaiverHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="823ace9d-16ef-4534-96bf-5a610deb8090" absoluteBounds="3.765, 17.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89e66868-d57c-4a1f-a954-8c1bdd04e84a" absoluteBounds="6.75, 16.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_Present_class" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b00d72e3-11a2-40af-ac5b-462a4e39d445" absoluteBounds="6.765, 17.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7da7687-341b-4aa8-97d6-c7c94fa03407" absoluteBounds="18.75, 6.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/SWISDataContext/tbl_ExamName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d41e8c4a-5295-41f8-898a-df98747da818" absoluteBounds="18.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="764715d7-7322-42d6-837f-fd9ad71bedc7" absoluteBounds="18.75, 9.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_ExamType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4991f620-664a-468c-9585-6c41d948f322" absoluteBounds="18.765, 10.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bbe03e12-463c-49d6-8e27-0bfd80182dbe" absoluteBounds="18.75, 12.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/SWISDataContext/Class" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2466ede-6ab0-462f-86eb-40457924df87" absoluteBounds="18.765, 13.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d79540b8-32a6-430b-a764-b1ff376730a7" absoluteBounds="18.75, 16.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/SWISDataContext/Branch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7bbcd27-9757-41d1-b441-9c0fe09b2aca" absoluteBounds="18.765, 17.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c973a9d-3070-4e2e-9625-8b4df900b61d" absoluteBounds="12.75, 19.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/SWISDataContext/EmployeeDesignation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00c11402-7a06-4c81-87eb-ecbd6453af26" absoluteBounds="12.765, 20.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52e8fe21-a23f-4a36-b2df-7b1ff90fc593" absoluteBounds="15.75, 19.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/SWISDataContext/EmployeeCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64b47cb5-2de7-4b00-8ac0-4f962cd0e748" absoluteBounds="15.765, 20.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5dee64d-da67-4ae4-8ef9-31111739cfb7" absoluteBounds="18.75, 19.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SWISDataContext/EmployeeDoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f8b0f30-274b-4fdd-9af6-a92d76d78471" absoluteBounds="18.765, 20.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d54fb16-4355-4cd2-8447-4069004272a7" absoluteBounds="21.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/SWISDataContext/tbl_EmployeeEmergencyContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21c81e80-fc82-4eab-ad92-2aaa5c27d732" absoluteBounds="21.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd8b7cfb-59af-4d9b-92d6-b8ab7f07035e" absoluteBounds="0.75, 21.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_PreviousSchool" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3da19ab7-68dd-4247-b634-f431f7ca2d50" absoluteBounds="0.765, 22.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fa7e7f3-cd01-4214-9c78-bb829b4b488b" absoluteBounds="21.75, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SWISDataContext/tblSection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e3bb199-d3dd-40f7-a210-48d024a58098" absoluteBounds="21.765, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2f2114b-051b-4c99-a5db-2aee25cd95c0" absoluteBounds="3.75, 21.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_ExamMark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16bbb408-636b-42ac-b8fa-1c1d60d9775c" absoluteBounds="3.765, 22.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="25b77450-528f-437b-9814-f3d1642f2db8" absoluteBounds="21.75, 6.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/SWISDataContext/tbl_InterviewSlot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a08e6f0-8bc6-4f89-82da-8ffd99958901" absoluteBounds="21.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1d4e83c-7cb4-45a3-8829-cf2870dd0452" absoluteBounds="6.75, 21.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_InterViewTime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b13815c3-e137-4317-88cf-ecb3d28a30ae" absoluteBounds="6.765, 22.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e4997c6-602b-4be3-8e3f-d88edd847965" absoluteBounds="21.75, 9.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_ExamSession" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48041a02-9b69-4ce8-9053-c5ee046ff5ee" absoluteBounds="21.765, 10.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0a5e94d-7dbb-4cd2-a51a-541f5b43fd31" absoluteBounds="21.75, 12.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_BoardExamResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac632fb0-910b-446c-a436-6083a3ff7a66" absoluteBounds="21.765, 13.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e41690bf-8a00-4a4d-bb41-93c63b5b4021" absoluteBounds="21.75, 17.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_OffDayStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be30cee7-8e75-423e-89b7-441244e9cabb" absoluteBounds="21.765, 18.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3458afc6-7460-42da-84ca-eab11b6373e4" absoluteBounds="21.75, 20.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_ReAdmissionHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2da86435-8c00-4fff-bcf0-d06b5d62075b" absoluteBounds="21.765, 21.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85340813-dc80-497a-b142-ad5f7197b0c5" absoluteBounds="9.75, 22.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_StudentAttendance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26e977f8-6e29-492b-ac05-d1d47667663a" absoluteBounds="9.765, 23.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4739cf76-0c27-4375-99ad-3777cfb50649" absoluteBounds="12.75, 22.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/SWISDataContext/tbl_StudentArea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdc340ea-5cf8-4eea-b049-83301d8c9a38" absoluteBounds="12.765, 23.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="407eb218-af8d-494a-843e-ebe47b5e4c54" absoluteBounds="15.75, 23.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SWISDataContext/EmployeeEducation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8e4c39a-a5e1-45c2-b251-71ad7b1ba815" absoluteBounds="15.765, 24.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd10d58a-ffe9-459a-80ba-abc51704c697" absoluteBounds="24.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SWISDataContext/tbl_EmployeeDegreeName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="389a293b-5b28-4a9b-a8d5-1d654128c730" absoluteBounds="24.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46a33901-4e8c-49bf-b4fe-427e6959a08f" absoluteBounds="24.75, 2.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_BoardSubject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d2d225b-7a82-4d2b-ba4c-7e315423373b" absoluteBounds="24.765, 3.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95cefd26-9758-4275-ba2e-c5b0703764de" absoluteBounds="24.75, 6.75, 2, 9.27065266927083">
+      <DataClassMoniker Name="/SWISDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fccd80ed-c033-4264-838a-a30d7382b0b4" absoluteBounds="24.765, 7.21, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31242153-b37d-42b1-9b6e-f1cfe33d356a" absoluteBounds="24.75, 17.75, 2, 7.9245426432291666">
+      <DataClassMoniker Name="/SWISDataContext/ParticipantStudent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4219e3cf-6240-4f5e-b9c0-df17e768084d" absoluteBounds="24.765, 18.21, 1.9700000000000002, 7.3645426432291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="279a5411-6505-44e5-af13-fc842d3e7cac" absoluteBounds="18.75, 25.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_BoardExamSubAssign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="558b5066-2937-42c9-9ed7-eb8b75ea60a8" absoluteBounds="18.765, 26.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7bb8f04-75f9-461f-8728-485ca1ef8ea9" absoluteBounds="9.75, 26.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/SWISDataContext/tbl_EmployeeSubjectAssign" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f71e7ed5-89a5-4610-83e9-3fbca577c124" absoluteBounds="9.765, 27.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="570f21e0-b50c-4b55-85f8-851dbcf70c9f" absoluteBounds="21.75, 26.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SWISDataContext/tempAttendence" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aac8991e-841b-4956-9102-d7629a3b5e17" absoluteBounds="21.765, 27.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70a85ce0-b080-41ed-93a3-7357f694dc0d" absoluteBounds="24.75, 26.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/SWISDataContext/tempTabulationSheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="053b27e1-2cf0-4c43-8cd7-a07c0c644f02" absoluteBounds="24.765, 27.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9b7cda4-6fd0-4570-b7d2-d702fc7caf37" absoluteBounds="27.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SWISDataContext/ProjectGrade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0be4736d-1b91-4572-85f9-c01c5d535125" absoluteBounds="27.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5390ce88-9433-4ffe-a093-cde953036a58" absoluteBounds="27.75, 3.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SWISDataContext/temp_AllBoardExamSubjectWithUnitCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee1df647-f2cb-45ae-ac1c-d76793bf912d" absoluteBounds="27.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c4a749e-19a9-45fb-ad8a-47e71d56b3b4" absoluteBounds="18.875, 2.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SWISDataContext/temp_AllSubjectWithUnitCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65ccb161-960b-4c93-8b37-251dcdd6127c" absoluteBounds="18.89, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79bc89fa-64ce-42f7-b459-7ee3299fee45" absoluteBounds="19, 0.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SWISDataContext/temp_IDCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea532135-5693-418c-be20-93bd25f41f78" absoluteBounds="19.015, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21da3263-c3db-4b83-b52b-e828447e8478" absoluteBounds="18.875, 4.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SWISDataContext/temp_FileTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0cd335e-d741-4e87-adcc-2f538945d4b0" absoluteBounds="18.89, 5.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67f84363-d840-428f-9941-b3f1091d47bb" absoluteBounds="30.125, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SWISDataContext/Temp_ReportTextObject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ac310e6-2742-4b8a-8d63-bd655c4be795" absoluteBounds="30.14, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd59284a-75dc-4823-b10a-7ecbf0ff2981" absoluteBounds="6.625, 23.5, 2, 10.809064127604165">
+      <DataClassMoniker Name="/SWISDataContext/Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="775cb7ff-a39e-4db0-8cba-3c470c0d34da" absoluteBounds="6.64, 23.96, 1.9700000000000002, 10.249064127604166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ff35a46-805f-4174-beea-44c6388c5413" absoluteBounds="0.75, 23.375, 2, 3.1170068359375">
+      <DataClassMoniker Name="/SWISDataContext/TempDynamicReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f878deb-cc71-4086-bd3a-522ef160f805" absoluteBounds="0.765, 23.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a56ed08-62bc-4f47-b1b3-a8d477470717" absoluteBounds="9.375, 16.375, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SWISDataContext/tbl_Subject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5af92b83-c46c-43d6-9b77-6e750d41ce87" absoluteBounds="9.39, 16.835, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3b9f267-8bc8-4917-bb81-ad741d8ddd1d" absoluteBounds="0.5, 6.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SWISDataContext/TempCurrentStudent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34bfe937-ea5a-479c-b47d-385059f2a53b" absoluteBounds="0.515, 6.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

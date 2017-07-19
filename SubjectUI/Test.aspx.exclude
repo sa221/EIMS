@@ -1,0 +1,28 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Test.aspx.cs" Inherits="SubjectUI_Test" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    
+    <div>
+        <asp:GridView ID="gridView1" runat="server">
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:CheckBox ID="chkSelect" runat="server" />
+                        <asp:HiddenField ID="hdValue" runat="server" Value='<%#Eval("ID") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>
+    <div>
+        <asp:Button ID="btnMove" runat="server" Text="Move" onclick="btnMove_Click"  />
+    </div>
+    <div>
+        <asp:GridView ID="gridView2" runat="server">
+        </asp:GridView>
+    </div>
+
+</asp:Content>
+

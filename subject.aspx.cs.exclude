@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class subject : System.Web.UI.Page
+
+{
+    SWISDataContext db = new SWISDataContext();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        Subject sb = new Subject();
+        sb.VarSubjectCode= Convert.ToInt32(txtSubjectCode.Text);
+        sb.VarSubjectName=txtSubjectName.Text;
+
+        db.Subjects.InsertOnSubmit(sb);
+        db.SubmitChanges();
+        Literal1.Text = "Subject saved Successfully";
+           
+    }
+}

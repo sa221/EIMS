@@ -1,0 +1,43 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="subject.aspx.cs" Inherits="subject" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+<fieldset>
+        <legend><b>
+            <h2>
+                Subject Information</h2>
+        </b></legend>
+        <table class="style1">
+            <tr>
+                <td class="style4">
+                    Subject Code
+                </td>
+                <td class="style3">
+                    
+                    <asp:TextBox ID="txtSubjectCode" runat="server" Width="130px"></asp:TextBox>
+                </td>
+                </tr>
+                <tr>
+                 <td class="style4">
+                     Subject Name
+                </td>
+                <td class="style3">
+                    
+                    <asp:TextBox ID="txtSubjectName" runat="server"></asp:TextBox>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <asp:Button ID="btnSave" runat="server" Text="Save" 
+                        Width="57px" onclick="btnSave_Click" />
+                
+                </td>
+                <td>
+                    <asp:Literal ID="Literal1" runat="server"></asp:Literal></td>
+                
+                  </tr>
+                </table>
+                </fieldset>
+</asp:Content>
+

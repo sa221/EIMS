@@ -1,0 +1,118 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeFile="StudentSubjectAssign.aspx.cs" Inherits="SubjectUI_StudentSubjectAssign" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+<script type="text/javascript">
+function CheckBoxCount() {
+    var gv = document.getElementById("<%= studentSubjectGridView.ClientID %>");
+    var inputList = gv.getElementsByTagName("input");
+    var numChecked = 0;
+
+    for (var i = 0; i < inputList.length; i++) {
+        if (inputList[i].type == "checkbox" && inputList[i].checked) {
+            numChecked = numChecked + 1;
+        }
+    }
+
+    document.getElementById("<%=subCountTextBox.ClientID %>").value = numChecked;
+
+}
+</script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+    <fieldset>
+        <legend><b>
+     
+                <h2>Course Assign</h2>
+        </b></legend>
+        <table class="style1">
+            <tr>
+                <td>
+                    Student ID:
+                </td>
+                <td>
+                    <asp:TextBox ID="txtStdId" runat="server"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td>
+                    Select Class:
+                </td>
+                <td>
+                    
+                    <asp:DropDownList ID="classDropDown" runat="server" AppendDataBoundItems="True"
+                        DataSourceID="SqlDataSource1" DataTextField="VarClassName" 
+                        DataValueField="VarClassID" AutoPostBack="True">
+                        <asp:ListItem Value="0">--Class--</asp:ListItem>
+                    </asp:DropDownList>
+                    
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:SWISConnectionString %>" 
+                        SelectCommand="SELECT * FROM [Class]"></asp:SqlDataSource>
+                    
+                </td>
+                
+            </tr>
+           
+               
+            
+         
+            </table>
+    </fieldset>
+    <br/>
+     <asp:GridView ID="studentSubjectGridView" runat="server" AllowPaging="True" 
+        AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="VarSubjectCode" 
+        DataSourceID="SqlDataSource2">
+         <Columns>
+             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" 
+                 ShowSelectButton="True" />
+             <asp:TemplateField>
+                 <ItemTemplate>
+                     <asp:CheckBox ID="subCheckBox" runat="server" onclick="CheckBoxCount();"/>
+                 </ItemTemplate>
+             </asp:TemplateField>
+             <asp:BoundField DataField="VarSubjectName" HeaderText="Subject Name" 
+                 SortExpression="VarSubjectName" />
+             <asp:BoundField DataField="VarSubjectCode" HeaderText="Subject Code" 
+                 ReadOnly="True" SortExpression="VarSubjectCode" />
+                 
+               
+
+         </Columns>
+                </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:SWISConnectionString %>" 
+        DeleteCommand="DELETE FROM [tbl_Subject] WHERE [VarSubjectCode] = @VarSubjectCode" 
+        InsertCommand="INSERT INTO [tbl_Subject] ([VarSubjectCode], [VarSubjectName], [ClassId], [VarClassName]) VALUES (@VarSubjectCode, @VarSubjectName, @ClassId, @VarClassName)" 
+        SelectCommand="SELECT * FROM [tbl_Subject] WHERE ([ClassId] = @ClassId)" 
+        UpdateCommand="UPDATE [tbl_Subject] SET [VarSubjectName] = @VarSubjectName, [ClassId] = @ClassId, [VarClassName] = @VarClassName WHERE [VarSubjectCode] = @VarSubjectCode">
+        <DeleteParameters>
+            <asp:Parameter Name="VarSubjectCode" Type="String" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="VarSubjectCode" Type="String" />
+            <asp:Parameter Name="VarSubjectName" Type="String" />
+            <asp:Parameter Name="ClassId" Type="Int32" />
+            <asp:Parameter Name="VarClassName" Type="String" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:ControlParameter ControlID="classDropDown" Name="ClassId" 
+                PropertyName="SelectedValue" Type="Int32" />
+        </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="VarSubjectName" Type="String" />
+            <asp:Parameter Name="ClassId" Type="Int32" />
+            <asp:Parameter Name="VarClassName" Type="String" />
+            <asp:Parameter Name="VarSubjectCode" Type="String" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+    <br/>
+    Total Number of Subjects: 
+<%--    <div id="errfn">   </div>--%>
+    
+                  
+    <asp:TextBox ID="subCountTextBox" runat="server"></asp:TextBox>
+    <br/>
+    <asp:Button ID="saveButton" runat="server" Text="Save" 
+        onclick="saveButton_Click" />
+    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+</asp:Content>

@@ -1,0 +1,308 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js" type="text/javascript"></script>
+    <%--<script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>--%>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #NavigationMenu ul
+        {
+            z-index: 9999;
+        }
+        
+        #MainContent *
+        {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page" style="min-height: 600PX">
+        <div class="header">
+            <div class="title">
+                <div>
+                    <img id="Img1" runat="server" style="height: 100px; padding: 5px; width: 300px;"
+                        src="~/Image/mastermindLogo.png" alt="" /></div>
+                <%--<div>
+                    <h1>
+                        Mastermind English Medium School
+                    </h1>
+                </div>--%>
+            </div>
+            <div class="loginDisplay">
+                Welcome
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <%-- Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>--%>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/Account/Login.aspx" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear2 hideSkiplink" style="margin-top: 0px;">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal" OnMenuItemDataBound="NavigationMenu_MenuItemDataBound">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                        <asp:MenuItem Text="Employee">
+                            <asp:MenuItem NavigateUrl="~/Employee/EmployeeInformation.aspx" Text="Employee Information Setup"
+                                Value="Employee Information Setup"></asp:MenuItem>
+                            <asp:MenuItem Text="Employee Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/EmployeeListReport.aspx" Text="Employee List"
+                                    Value="Employee List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/EmployeeDetailsReport.aspx" Text="Employee Details"
+                                    Value="SC"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <%--<asp:MenuItem NavigateUrl="~/Employee/EmployeeAttendence.aspx" Text="Employee Attendance"
+                                Value="Employee Attendance"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Employee Search and update/EmployeeAttendanceUpdate.aspx"
+                                Text="Employee Attendance Modify" Value="Employee Attendance Modify"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Employee/EmployeeEducation.aspx" Text="Employee Education Entry"
+                                Value="Employee Education Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Employee/EmployeeTraining.aspx" Text="Employee Training Entry"
+                                Value="Employee Training Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Employee/EmploymentHistory.aspx" Text="Employee History"
+                                Value="Employee History"></asp:MenuItem>--%>
+                        </asp:MenuItem>
+                        <%--  <asp:MenuItem  Text="Registration">
+
+                             <asp:MenuItem NavigateUrl="~/Admin/Register.aspx" Text="User Registration"/>
+                         <asp:MenuItem NavigateUrl="~/Admin/Role Entry.aspx" Text="Role Entry"/>
+                          <asp:MenuItem NavigateUrl="~/Admin/User registration.aspx" Text="Ragistration manage"/>
+                        </asp:MenuItem>--%>
+                        <asp:MenuItem Text="All Entry" Value="New Item">
+                            <%--<asp:MenuItem NavigateUrl="~/All Set Up/DesignationEntry.aspx" Text="Designation Entry"
+                                Value="Designation Entry" PopOutImageUrl="~/Image/images.png"></asp:MenuItem>--%>
+                            <asp:MenuItem NavigateUrl="~/All Set Up/inputClass.aspx" Text="Class Entry" Value="Class Entry">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Section Entry" Value="Section Entry" NavigateUrl="~/All Set Up/Section.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Session Entry" Value="Session Entry" NavigateUrl="~/All Set Up/SessionEntry.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Shift Entry" Value="Shift Entry" NavigateUrl="~/All Set Up/ShiftEntry.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/All Set Up/House.aspx" Text="House Setup" Value="House Setup">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/All Set Up/InterviewTimeAndSlotSetup.aspx" Text="Interview Slot And Time Setup"
+                                Value="House Setup"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AccountsUI/FeesSetup.aspx" Text="Fees Entry" Value="Fees Entry">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/All Set Up/EmpCategoryAndDesignationEntry.aspx" Text="Employee Category & Designation Entry"
+                                Value="Fees Entry"></asp:MenuItem>
+                            <asp:MenuItem Text="User Setup" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/Admin/Role Entry.aspx" Text="Role Create" Value="Entry">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Register.aspx" Text="User Create" Value="Entry">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/User registration.aspx" Text="Update/Show User"
+                                    Value="Entry"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Subject" Value="Subject">
+                            <asp:MenuItem Text="Course Entry" Value="Course Entry" NavigateUrl="~/SubjectUI/CourseEntry.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Show Class Wise Subject" Value="Show Subject" NavigateUrl="~/SubjectUI/ShowClassWiseSubject.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="A-Level Subject Assign" Value="Edexcel Subject Assign" NavigateUrl="~/SubjectUI/EdexcelSubjectAssignUpdate.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Subject Assign(upto O-Level)" Value="Normal Subject Assign" NavigateUrl="~/SubjectUI/StudentSubjectsAssign.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Teacher Subject Assign" Value="Normal Subject Assign" NavigateUrl="~/SubjectUI/TeacherSubjectAssign.aspx">
+                            </asp:MenuItem>
+                            <%--<asp:MenuItem Text="Show All Courses" Value="Show All Courses" 
+                                NavigateUrl="~/SubjectUI/ShowAllCourse.aspx"></asp:MenuItem>--%>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Admission" Value="Admission">
+                            <asp:MenuItem NavigateUrl="~/Student Info Entry/Applicant Student.aspx" Text="Student Application Form"
+                                Value="Applicant Student Form"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Entry/StudentAddmission.aspx" Text="Student Addmisssion Form"
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Entry/ReAdmission.aspx" Text="Student Re-Admission"
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Entry/ShowAllStudent.aspx" Text="Select For Admission"
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/InterviewListReport.aspx" Text="Interview List"
+                                    Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/InterviewResult.aspx" Text="Interview Result"
+                                    Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/AdmissionResultReport.aspx" Text="Admission Test Result"
+                                    Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/ApplicantListReport.aspx" Text="Applicant List"
+                                    Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/AdmitRequest.aspx" Text="Admission Confirmation"
+                                    Value="AdmissionConfirmation"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/AdmittedStudentList.aspx" Text="Admitted Student Report"
+                                    Value="AdmissionConfirmation"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/OrientationStudentsList.aspx" Text="Orientation Schedule"
+                                    Value="AdmissionConfirmation"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Student" Value="Student">
+                            <%--<asp:MenuItem NavigateUrl="~/Student Info Entry/Student Attendence.aspx" Text="Student attendance"
+                                Value="Student attendance"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Search and update/ApplicantStudentInfo.aspx"
+                                Text="Show all applicant" Value="Show all applicant"></asp:MenuItem>--%>
+                            <asp:MenuItem NavigateUrl="~/Student Info Search and update/ShowAllStudent.aspx"
+                                Text="Show All Student Info" Value="Show all Student Info"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Search and update/ShowUpdatedStudent.aspx"
+                                Text="Student Search" Value="ShowUpdatedStudent"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Search and update/studentAttendanceUpdate.aspx"
+                                Text="Student Attendance Update" Value="Student Attendance Update"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Search and update/StudentInfoUpdateSecondary.aspx"
+                                Text="Student Info Update" Value="Student Info Update)"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Entry/StudentTransfer.aspx" Text="Student Transfer"
+                                Value="Student Transfer"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student Info Entry/AttendanceEntry.aspx" Text="Student Attendance"
+                                Value="Student Attendance"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Result" Value="Result">
+                            <asp:MenuItem NavigateUrl="~/ResultProcessing/ExamNameAndTypeSetup.aspx" Text="Exam Setup"
+                                Value="Exam Setup"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ResultProcessing/MarksEntry.aspx" Text="Marks Entry"
+                                Value="Marks Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ResultProcessing/GradeEntry.aspx" Text="Grade Entry"
+                                Value="Grade Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ReportsUI/StudentMarksSheet.aspx" Text="Marks Sheet"
+                                Value="Marks Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ReportsUI/Tabulation_OLevel.aspx" Text="Tabulation Sheet"
+                                Value="Tabulation Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ReportsUI/SubjectWiseTabulationSheetALevel.aspx" Text="Subject Wise Tabulation Sheet"
+                                Value="Tabulation Entry"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Accounts" Value="Accounts">
+                            <asp:MenuItem NavigateUrl="~/AccountsUI/FeesCollection.aspx" Text="Student Fees Collection"
+                                Value="Student Fees Collection"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AccountsUI/StudentAccountHistory.aspx" Text="Student Leadger"
+                                Value="Student Fees Collection"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AccountsUI/FeesEntryManuly.aspx" Text="Fees Entry/Update"
+                                Value="Manualy Fees Entry"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AccountsUI/WaiverAssign.aspx" Text="Waiver Assign" Value="Waiver Assign">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Board Exam" Value="BE">
+                            <asp:MenuItem NavigateUrl="~/BoardExam/BoardExamSubjectEntry.aspx" Text="Board Exam Subject Entry"
+                                Value="Subject List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/BoardExam/BoardExamSubEntry.aspx" Text="Board Exam Subject Assign"
+                                Value="Subject List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/BoardExam/BoardExamResultEntry.aspx" Text="Board Exam Result Entry"
+                                Value="Subject List"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Report" Value="Report">
+                            <asp:MenuItem Text="Student List Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/StudentList.aspx" Text="Student List" Value="Student List">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/PreviousStudentList.aspx" Text="Previous Student List" Value="Student List">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/StudentSMSNumberReport.aspx" Text="Student List with Phone"
+                                    Value="Student List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/LeftStudentInfo.aspx" Text="Left Student List"
+                                    Value="LeftStudentReport"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/RepeatStudentList.aspx" Text="Repeat Student List"
+                                    Value="Repeat Student List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/TotalStudentReport.aspx" Text="Total Number of Student"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/TotalStudentSummary.aspx" Text="Total Student Summary"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/TotalStudentTopSheet.aspx" Text="Total Student Topsheet"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/AdmittedStudentListSessionWise.aspx" Text="New Admitted Student List"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/ReligionGenderSummaryReport.aspx" Text="Gender/Religion Wise Student Summary"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/DynamicReport.aspx" Text="Dynamic Report"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ReportsUI/CurrentStudentSUmmary.aspx" Text="Current Student Summary"
+                                    Value="Total Number of Student"></asp:MenuItem>
+                                    
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Subject Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/PerformanceChart.aspx" Text="Performance Chart"
+                                    Value="PerformanceChart"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/SubjectWiseStudentList.aspx" Text="Subject Wise Student List"
+                                    Value="SubjectWiseStudentList"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/A-LevelStudentListWithSubject.aspx" Text="All Subject Report"
+                                    Value="All Subject Report"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/TakenSubjectList.aspx" Text="Taken Subject List"
+                                    Value="Taken Subject List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/ClassWiseSubjectList.aspx" Text="Class Wise Subject List"
+                                    Value="Class Wise Subject List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/TeacherMarksEntryReport.aspx" Text="Teacher Marks Entry Report"
+                                    Value="Class Wise Subject List"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/SubjectWiseMarksEntryReport.aspx" Text="Subject Marks Entry Report"
+                                    Value="Class Wise Subject List"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ReportsUI/SubjectWiseCombineStudentList.aspx" Text="Subject Wise Combine Student List"
+                                    Value="Class Wise Subject List"></asp:MenuItem>
+                                    
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Student Document" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/StudentProfile.aspx" Text="Student Profile"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/StudentCertificate.aspx" Text="Student Certificate"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/IdCardGererator.aspx" Text="ID Card" Value="idCard">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/AdmitCardGenerator.aspx" Text="Admit Card"
+                                    Value="idCard"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/StudentLeft.aspx" Text="Transfer Certificate"
+                                    Value="TC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/UpdateFileTag.aspx" Text="Student File Tag"
+                                    Value="Student Filetag Report"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/SectionPaper.aspx" Text="Section Paper" Value="Student Section Paper">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Board Exam Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/BoardExamineeList.aspx" Text="Examinee List(Board)"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/BoardExamineeSchool.aspx" Text="Examinee List(School)"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/BoardExamStudentListSubjectWise.aspx" Text="Subject Wise Report"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/BoardExamTopSheet.aspx" Text="Subject Top Sheet"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/ExamineeWithPhoneNumber.aspx" Text="Examinee Phone Number"
+                                    Value="SC"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Employee Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/EmployeeListReport.aspx" Text="Employee List"
+                                    Value="SC"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReportsUI/EmployeeDetailsReport.aspx" Text="Employee Report"
+                                    Value="SC"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <%--<asp:MenuItem NavigateUrl="~/About.aspx" Text="About" Value="About"></asp:MenuItem>--%>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            &copy;Reserved
+            <%: DateTime.Now.Year %>
+            -Powered by <a href="http://www.smartsofttechnology.com" target="_blank">SmartSoft Technology</a></p>
+    </div>
+    </form>
+</body>
+</html>
